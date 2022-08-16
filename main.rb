@@ -37,13 +37,13 @@ def battle
     puts("\nSelect the PLAYER 1: ")
     id_player_1 = gets.chomp.to_i
     if id_player_1 <= bagmons.length
-      player_1 = Bagbom.new(bagmons[id_player_1])
+      player_1 = Bagbom.new(bagmons[id_player_1 - 1])
 
       loop do
         puts("\nSelect the PLAYER 2: ")
         id_player_2 = gets.chomp.to_i
         if id_player_2 <= bagmons.length && id_player_2 != id_player_1
-          player_2 = Bagbom.new(bagmons[id_player_2])
+          player_2 = Bagbom.new(bagmons[id_player_2 - 1])
 
           
           puts("\nBagmons selected successfully!")
